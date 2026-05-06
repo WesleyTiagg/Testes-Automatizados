@@ -7,7 +7,6 @@ export interface Cryptocurrency {
   image?: string;
 }
 
-// Static fallback data used when the API is unavailable.
 export const cryptocurrencies: Cryptocurrency[] = [
   {
     id: "bitcoin",
@@ -15,6 +14,7 @@ export const cryptocurrencies: Cryptocurrency[] = [
     symbol: "BTC",
     price: 67999.5,
     change24h: 2.45,
+    image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501628",
   },
   {
     id: "ethereum",
@@ -22,6 +22,7 @@ export const cryptocurrencies: Cryptocurrency[] = [
     symbol: "ETH",
     price: 3850.25,
     change24h: -1.23,
+    image: "https://assets.coingecko.com/coins/images/279/large/ethereum.png?1696501628",
   },
   {
     id: "cardano",
@@ -29,6 +30,7 @@ export const cryptocurrencies: Cryptocurrency[] = [
     symbol: "ADA",
     price: 0.58,
     change24h: 5.67,
+    image: "https://assets.coingecko.com/coins/images/975/large/cardano.png?1696501628",
   },
   {
     id: "solana",
@@ -36,6 +38,7 @@ export const cryptocurrencies: Cryptocurrency[] = [
     symbol: "SOL",
     price: 145.32,
     change24h: 3.89,
+    image: "https://assets.coingecko.com/coins/images/4128/large/solana.png?1696501628",
   },
   {
     id: "ripple",
@@ -43,6 +46,7 @@ export const cryptocurrencies: Cryptocurrency[] = [
     symbol: "XRP",
     price: 0.52,
     change24h: -0.45,
+    image: "https://assets.coingecko.com/coins/images/44/large/ripple.png?1696501628",
   },
   {
     id: "polkadot",
@@ -50,6 +54,7 @@ export const cryptocurrencies: Cryptocurrency[] = [
     symbol: "DOT",
     price: 7.23,
     change24h: 1.98,
+    image: "https://assets.coingecko.com/coins/images/6312/large/polkadot.png?1696501628",
   },
   {
     id: "dogecoin",
@@ -57,6 +62,7 @@ export const cryptocurrencies: Cryptocurrency[] = [
     symbol: "DOGE",
     price: 0.15,
     change24h: -2.11,
+    image: "https://assets.coingecko.com/coins/images/7129/large/dogecoin.png?1696501628",
   },
   {
     id: "avalanche",
@@ -64,6 +70,7 @@ export const cryptocurrencies: Cryptocurrency[] = [
     symbol: "AVAX",
     price: 38.45,
     change24h: 4.56,
+    image: "https://assets.coingecko.com/coins/images/4257/large/avalanche-2.png?1696501628",
   },
 ];
 
@@ -131,4 +138,3 @@ export async function fetchCryptocurrenciesFromApi(): Promise<Cryptocurrency[]> 
     image: coin.image,
   }));
 }
-
